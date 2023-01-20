@@ -4,9 +4,7 @@ import com.helena.unitConverter.entity.Unit;
 import com.helena.unitConverter.service.UnitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,6 +22,15 @@ public class UnitController {
     @GetMapping("/getAllUnits")
     public ResponseEntity<List<Unit>>getAllUnits(){
         return unitService.getAllUnits();
+    }
+    @GetMapping("/getUnitById/{id}")
+    public ResponseEntity<Unit> getIdUnit (@PathVariable("id") Long id) {
+        return unitService.getUnitById(id);
+    }
+
+        @PostMapping("/createUnit")
+    public ResponseEntity<Unit> createUnit(@RequestBody Unit unit){
+        return unitService.create(unit);
     }
 
 }
