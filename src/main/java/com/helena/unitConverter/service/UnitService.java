@@ -51,4 +51,16 @@ public class UnitService {
             return new ResponseEntity("Error code" + e , HttpStatus.BAD_REQUEST);
         }
     }
+
+
+
+    public ResponseEntity deleteUnit(Long id) {
+        if(unitRepository.existsById(id)){
+            unitRepository.deleteById(id);
+        }
+        else{
+            throw new RuntimeException("Supplier with id " + id + " does not exist");
+        }
+        return null;
+    }
 }

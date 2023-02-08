@@ -28,9 +28,13 @@ public class UnitController {
         return unitService.getUnitById(id);
     }
 
-        @PostMapping("/createUnit")
+    @PostMapping("/createUnit")
     public ResponseEntity<Unit> createUnit(@RequestBody Unit unit){
         return unitService.create(unit);
     }
 
+    @DeleteMapping("/delete/{id}")
+    public void deleteUnit(@PathVariable("id") Long id){
+        unitService.deleteUnit(id);
+    }
 }
