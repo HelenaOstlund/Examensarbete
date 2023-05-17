@@ -59,7 +59,7 @@ public class UnitService {
             unitRepository.deleteById(id);
         }
         else{
-            throw new RuntimeException("Supplier with id " + id + " does not exist");
+            throw new RuntimeException("Unit with id " + id + " does not exist");
         }
         return null;
     }

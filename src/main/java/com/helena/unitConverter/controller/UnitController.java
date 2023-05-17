@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/units")
+@RequestMapping()
 public class UnitController {
 
     private UnitService unitService;
@@ -19,7 +19,7 @@ public class UnitController {
         this.unitService = unitService;
     }
 
-    @GetMapping("/getAllUnits")
+    @GetMapping("/api/v1/auth/getAllUnits")
     public ResponseEntity<List<Unit>>getAllUnits(){
         return unitService.getAllUnits();
     }
@@ -33,7 +33,7 @@ public class UnitController {
         return unitService.create(unit);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/deleteUnit/{id}")
     public void deleteUnit(@PathVariable("id") Long id){
         unitService.deleteUnit(id);
     }
