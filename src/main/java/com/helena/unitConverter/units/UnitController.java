@@ -1,7 +1,7 @@
-package com.helena.unitConverter.controller;
+package com.helena.unitConverter.units;
 
-import com.helena.unitConverter.entity.Unit;
-import com.helena.unitConverter.service.UnitService;
+import com.helena.unitConverter.units.Unit;
+import com.helena.unitConverter.units.UnitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

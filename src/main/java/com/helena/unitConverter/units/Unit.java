@@ -1,4 +1,4 @@
-package com.helena.unitConverter.entity;
+package com.helena.unitConverter.units;
 
 import jakarta.persistence.*;
 

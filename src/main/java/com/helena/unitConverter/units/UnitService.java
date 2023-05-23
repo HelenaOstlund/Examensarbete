@@ -1,7 +1,5 @@
-package com.helena.unitConverter.service;
+package com.helena.unitConverter.units;
 
-import com.helena.unitConverter.entity.Unit;
-import com.helena.unitConverter.repository.UnitRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
